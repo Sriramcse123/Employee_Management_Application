@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <br>
+  <h1 class="text-center">Employee Details </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Department</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employees of employee">
+        <td>{{employees.id}}</td>
+        <td>{{employees.firstName}}</td>
+        <td>{{employees.lastName}}</td>
+        <td>{{employees.email}}</td>
+        <td>{{employees.department}}</td>
+        <td><button class="btn btn-outline-primary" type="button" (click)="updateEmployee(employees.id)">Update</button></td>
+        <td><button class="btn btn-outline-danger" type="button" (click)="deleteEmployee(employees.id)">Delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+
